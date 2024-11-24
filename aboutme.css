@@ -1,0 +1,134 @@
+html, body{
+  background-color: rgb(228, 223, 233);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
+   background-size: cover;
+   margin:0;
+   padding:0;
+ }
+  .header{
+     background-color: blue;
+     height:60px;
+     text-align:  right;
+     text-overflow: unset;
+     line-height: 1.7em;
+     font-size: 30px;
+     margin-bottom: 20px;
+     width: 100%;
+   }
+   .header p{
+     margin-right: 25px;
+ }
+   .all{
+   display: flex;
+   max-height: auto;
+   max-width: auto;
+ } 
+ /* flexbox */
+   .container{
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: center;
+     background-color: rgb(109, 255, 80);
+     height:530px;
+     width:900px;
+     margin-left: 35px;
+     border: 1px solid black;
+   }
+   .subcontainer{
+     display: flex;
+     justify-content: center;
+     background-color: coral;
+     height:465px;
+     width:900px;
+     margin: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+   }
+   .navbar{
+     flex:1;
+     flex:22%;
+     background-color: darkviolet;
+     justify-content: center;
+   }
+   .main{
+     flex:2;
+     flex:78%;
+     background-color: rgb(211, 141, 0);
+     border-top-left-radius:5px;
+     border-bottom-left-radius:5px;
+     overflow: auto;
+ 
+   }
+   .subhead{
+     background-color: aqua;
+     width:900px;
+     height: 45px;
+     flex:100%;
+     margin: 10px;
+     margin-bottom: -18px;
+     border: 1px solid black;
+   }
+   .extra{
+     margin-left: 10px;
+     background-color: cadetblue;
+     width:230px;
+     height:530px;
+     border-radius: 3px;
+     border: 1px solid black;
+   } 
+   .maintop{
+     display: flex;
+   } 
+   /* flexbox */
+   .navbar img{
+     border: 1px solid black;
+     border-radius: 2px;
+     width: 80%;
+     object-fit: cover;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 25px;
+   } 
+   .navbar a{
+     color: black;
+   }  
+ /* mobile code */
+ @media all and (max-width: 800px){
+   .all{
+       flex: 2;
+       flex-direction: column;
+    }
+ 
+    .container{
+       order: 1;
+       width: 90%;
+       margin-bottom: 20px;
+       
+    }
+    .content{
+    height: 40px;
+    overflow: auto;
+     
+  }
+  .main{
+   overflow: auto;
+    
+ }
+  .subcontainer{
+   flex-direction: column;
+   
+ }
+  #kiku{ width: 30%;}
+    .extra{
+       order: 2;
+       width: 90%;
+       margin-left: 35px;
+    }
+ 
+   }
+ /* mobile code */
+ 
