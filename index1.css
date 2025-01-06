@@ -1,12 +1,18 @@
 html, body{
-  background-image: url();
-  background-size:cover;
-  background-repeat: no-repeat;
+  background-image: url(https://static.tumblr.com/bd328b0955178d08620e530517c238df/lpnm2ad/ecQn9i31o/tumblr_static_50rjgkcu7m88woco048o4g4sg.png);
+  background-repeat: repeat-x;
+  animation: scroll 1000s infinite linear;
+  background-size: auto 100%;
   perspective: 800px;
- overflow: hidden;
- margin-top: 0;
- margin-right: 0;
- margin-left: 0;
+  overflow: auto;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+
+}
+@keyframes scroll{
+  from { background-position: 0%;}
+  to  { background-position: 10000%;}
 }
  .header{
     height: 60px;
@@ -16,7 +22,7 @@ html, body{
     font-size: 30px;
     margin-bottom: 20px;
     width: 100%;
-    background-image: -webkit-linear-gradient( #edf674, transparent);
+    background-image: -webkit-linear-gradient( #ecf7aa75, transparent);
   }
   .header p{
     margin-right: 25px;
@@ -32,7 +38,7 @@ html, body{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #aecb3a;
+    background-color: #93c4b4;
     height:530px;
     width:900px;
     margin-left: 35px;
@@ -84,10 +90,8 @@ html, body{
   }
   .extra{
     margin-left: 20px;
-
     width:230px;
     height:530px;
-    border-radius: 3px;
     
   } 
   .maintop{
@@ -109,38 +113,61 @@ html, body{
   }  
 /* mobile code */
 @media all and (max-width: 800px){
+  .html, .body{
+    overflow: scroll;
+ }
+  
   .all{
-      flex: 2;
+      flex: 1;
       flex-direction: column;
    }
-
    .container{
       order: 1;
       width: 90%;
       margin-bottom: 20px;
-      
+      height:1500px;
    }
-   .content{
-   height: 40px;
-   overflow: auto;
-    
+   .subcontainer{
+    height: 1400px;
+    width: 97%;
  }
+ .subhead{
+  height: 60px;
+  width: 90%;
+} 
+.content{
+   overflow: auto;
+   background-size: 0% !important;
+   border: 0.5px black solid;
+ }
+ .content h3, content h4, content p{
+    background-color: #e6f6fe !important;
+}
  .main{
   overflow: auto;
-  height: 50px;
 }
 .navbar{
   overflow: auto;
-  height: 50px;
-  justify-content: center;
-  
+}
+.navbar a{
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
+  width: 70% !important;
 }
 .navbar table{ 
-  margin-left: 25px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 70% !important;
+}
+.stamps{ 
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
+  width: 70% !important;
 }
  .subcontainer{
   flex-direction: column;
-  
 }
 .maintop{
   flex-direction: column;
@@ -148,10 +175,18 @@ html, body{
   margin-left: auto;
   margin-right: auto;
 }
+.misc{
+  flex: 1;
+  flex-direction: column;
+}
+.pixeltalia{
+  width: 50% !important;
+  margin-left: 25% !important;
+}
 table{
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
+
 }
 .faketabs table{
   display: none;
@@ -162,13 +197,16 @@ table{
  #td2, #td3, #td4 {
   display: none;
  }
- #kiku{ width: 30%;}
+ #kiku{ width: 50%;}
    .extra{
       order: 2;
       width: 90%;
-      margin-left: 35px;
+      margin-left: 100px !important;
    }
-
+   .extra{
+    margin-left: 35px !important;
+    margin-right: auto !important;
+ }
   }
 /* mobile code */
 .content h5{
@@ -178,7 +216,7 @@ table{
   
 }
 .content h4{
-  margin-top: 35px;
+  margin-top: px;
   margin-left: 2px;
   
 }
@@ -239,9 +277,10 @@ table{
     width: 150px;
     text-decoration: none;
     background-color: #e6f6fe;
-    background-image: -webkit-linear-gradient(#c3042a,#f68371,#dc413c,#fe8052);
-    box-shadow:0px 9px 5px -6px  #d09fa4;
-    color: #f4ffff;
+    background-image: -webkit-linear-gradient(#6ab09c,#93c1ac,#dde6a4 );
+    box-shadow:0px 9px 5px -6px  #d6cfa7;
+    color: #ffffff;
+    
     font-family: tahoma;
     font-size: 11px;
     display: inline-block;
@@ -254,12 +293,11 @@ table{
   left: 2px;
   width: calc(100% - 4px);
   height: 50%;
-  background: linear-gradient(rgba(252, 180, 205, 0.584), rgba(151, 122, 131, 0.2));
+  background: linear-gradient(rgba(229, 252, 180, 0.584), rgba(151, 122, 131, 0.2));
   
 }
 .navbar a:hover{
     text-decoration: underline;
-    
 }
 .navbar table{
   border-collapse: collapse;
@@ -304,14 +342,14 @@ table{
 }
 #img1{
   position: absolute;
-  bottom: 20px;
+  bottom: 150px;
   left:1075px;
   backface-visibility: hidden;
   z-index: 100;
 }
 #img2{
   position: absolute;
-  bottom: 20px;
+  bottom: 150px;
   left:1075px;
   z-index: 50;
 ;
@@ -327,15 +365,15 @@ table{
   background-color: coral;
 }
 .extrabox{
-  height: 225px;
+  height: 210px;
   border: 1px solid black;
-  border-top: transparent;
+  border-top: 1px solid rgb(126, 126, 126);
   background-color: rgb(220, 255, 80);
 }
-.calendar{
- margin-top: 20px;
- border: 0.5px rgb(198, 198, 198) solid;
+.box{
+  height: 250px;
 }
+
 #td1, #td2, #td3, #td4 {
   border: transparent;
  }
@@ -354,7 +392,7 @@ table{
 }
 .subhead{
   background-color: #03a8fa;
-    background-image: -webkit-linear-gradient(#aecb3a,#ccdd5b,#dde6a4 );
+    background-image: -webkit-linear-gradient(#6ab09c,#93c1ac,#dde6a4 );
     color: #f4ffff;
     display:inline-block;
     position: relative;
@@ -368,37 +406,38 @@ table{
   
   .content h5, .content h4{
     font-family: ms ui gothic;
-
-    color: rgb(100, 59, 23);
+    color: rgb(88, 69, 52);
     font-size: 11px;
   }
   .content a{
-     font-size: 16px;
-     color: #456b17;
+     font-size: 14px;
+     color: #175c6b;
      text-decoration: none;
      font-family: ms ui gothic;
+     
   }
   .content a:hover{
     text-decoration: UNDERLINE;
  }
   .content hr{
-    border: 1px solid #d6d166;
+    border: 1px solid #91ad70;
  }
  .content {
-  background-image: url(https://i.pinimg.com/736x/86/45/46/864546c7153ce6abf19e167d6799fec3.jpg);
+  background-image: url(https://i.postimg.cc/dV9MDw12/ezgif-6-3d6536bbf5.jpg);
 background-repeat: no-repeat;
-background-size: calc(210% - 4px);
+background-size: calc(120%);
 padding: 10px;
 
 }
 .extraheader {
   color: #ffffff;
-  background-image: -webkit-linear-gradient(#aecb3a,#ccdd5b,#dde6a4 );
+  background-image: -webkit-linear-gradient(#6ab09c,#93c1ac,#bcd88b );
 }
 .extraheader p{
-  font-family: homemade apple;
+  font-family: tahoma;
+  font-weight: bold;
   font-size: 10px;
-  margin-top: -2px;
+  margin-top: 2px;
   margin-left: 10px;
 }
 .extrabox{
@@ -419,12 +458,59 @@ padding: 10px;
  }
  .albums{
   display: flex;
-  display: block;
-  gap: 20px;
+  justify-content: center;
+  gap: 5px;
   margin: 5px;
-  position: relative;
+  margin-top: 20px;
  }
- #berry, #ayso{
-  width: 49%;
-  margin-top: 45px;
+ #spaghetti{
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  margin-bottom: -5px;
  }
+ #berry{
+  width:  120px
+ }
+ #ayso{
+  width:  95px
+ }
+#td2, #td3, #td4{
+            color: #fefff4;
+ }
+ .pixeltalia{
+        display: flex;
+        flex-direction: column;
+        width: 23%;
+        margin-top: 30px;
+        margin-left: 40px;
+ }
+ .misc{
+  display: flex;
+
+}
+#voiture{
+      margin-bottom: 40px;
+      margin-left: 0px;
+}
+#music{
+  width: 100%;
+  height: 10%;
+
+}
+.misc{
+  display: flex;
+
+}
+.main a{
+margin-bottom: 20px;
+border: 1px solid rgb(95, 109, 109);
+text-decoration: none;
+color: #175c6b;
+}
+.main a:hover{
+  text-decoration: underline;
+  }
+  .faketabs a{
+    border: transparent;
+    }
